@@ -1,6 +1,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 const inquirer = require("inquirer");
+const { program } = require("commander");
 const { colorize } = require("./utils");
 
 const DIRECTORY = "./src/content";
