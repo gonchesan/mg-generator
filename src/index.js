@@ -6,16 +6,16 @@ const { colorize } = require("./utils");
 
 const DIRECTORY = "./src/content";
 
-function createTable({ title, isPrivate, description, minRead, tags }) {
+function createTable({ title, isPrivate, description, minRead, fileTags }) {
   const updatedDate = new Date().toISOString();
 
   return `
   ---
-  title: ${title}
-  description: ${description}
+  title: '${title}'
+  description: '${description}'
   heroImage: '/blog-placeholder.jpg'
-  updatedDate: ${updatedDate}
-  tags: ${tags}
+  updatedDate: '${updatedDate}'
+  tags: ${fileTags}
   minRead: ${minRead}
   isPrivate: ${isPrivate}
   ---
@@ -131,13 +131,14 @@ function generateMarkdownFile() {
 
         const fileSlug = slugify(title);
         const filePath = path.join(DIRECTORY, folder, `${fileSlug}.md`);
+        const fileTags = tags ? tags.split(",") : [];
 
         const content = createTable({
           title,
           isPrivate,
           description,
           minRead,
-          tags,
+          fileTags,
         });
 
         try {
