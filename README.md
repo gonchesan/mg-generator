@@ -1,4 +1,4 @@
-# astro-md-generator
+# 🌸 mind-gardens-generator
 
 Utilize the command-line interface (CLI) to seamlessly integrate new posts into your Astro project.
 
