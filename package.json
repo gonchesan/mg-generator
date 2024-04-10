@@ -1,6 +1,6 @@
 {
   "name": "mind-gardens-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utilize the command-line interface (CLI) to seamlessly integrate new posts into your Astro project.",
   "main": "src/index.js",
   "scripts": {
